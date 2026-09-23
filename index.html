@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Registration Form</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef6ff;
+
+    }
+
+    h2 {
+      color: #003f7f;
+    }
+    form label
+    { font-size:16px;}
+
+    form {
+      background: white;
+      width: 400px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="date"],
+    input[type="color"],
+    input[type="tel"],
+    input[type="url"],
+    input[list],
+    input[type="file"],
+    input[type="range"] {
+      width: 80%;
+      padding: 6px;
+      border: 1px solid #999;
+      border-radius: 5px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      width: 40%;
+      padding: 8px;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    input[type="reset"] {
+      background-color: #6c757d;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      opacity: 0.9;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h2 align="center">Student Registration Form</h2>
+
+  <form action="submit.html" method="post" autocomplete="on">
+
+    <label for="fname">Full Name:</label><br>
+    <input type="text" id="fname" name="fullname" placeholder="Enter your full name" required maxlength="5"><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" placeholder="example@gmail.com" required><br><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="pwd" minlength="6" required><br><br>
+
+    <label>Gender:</label><br>
+    <input type="radio" name="gender" value="m"> Male
+    <input type="radio" name="gender" value="f" checked> Female<br><br>
+
+    <label>Hobbies:</label><br>
+    <input type="checkbox" name="hobby" value="reading" checked> Reading
+    <input type="checkbox" name="hobby" value="music"> Music
+    <input type="checkbox" name="hobby" value="sports"> Sports<br><br>
+
+    <label for="dob">Date of Birth:</label><br>
+    <input type="date" id="dob" name="dob" required><br><br>
+
+    <label for="age">Age (18–60):</label><br>
+    <input type="number" id="age" name="age" min="18" max="60" required><br><br>
+
+    <label for="color">Favorite Color:</label><br>
+    <input type="color" id="color" name="favcolor"><br><br>
+
+    <label for="range">Satisfaction Level (0–10):</label><br>
+    <input type="range" id="range" name="satisfaction" min="0" max="3" step="1"><br><br>
+
+    <label for="phone">Phone:</label><br>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10-digit number"><br><br>
+
+    <label for="website">Personal Website:</label><br>
+    <input type="url" id="website" name="website" placeholder="https://example.com"><br><br>
+
+    <label for="photo">Upload Photo:</label><br>
+    <input type="file" id="photo" name="photo" accept=".jpg,.png" required><br><br>
+
+    <label for="branch">Select Branch:</label><br>
+    <input list="branches" name="branch" id="branch" placeholder="Choose branch"><br>
+    <datalist id="branches">
+      <option value="Computer Science">
+      <option value="Information Technology">
+      <option value="Electronics">
+      <option value="Mechanical">
+    </datalist><br><br>
+
+    <input type="submit" value="Register">
+    <input type="reset" value="Clear"><br><br>
+<a href="intro.html">Introduction</a>
+  </form>
+
+</body>
+</html>
